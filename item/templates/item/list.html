@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h2 class="page-header"> リンダで覚える英単語 </h2>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Example Sentence</th>
+                    <th>Word</th>
+                    <th>Meaning</th>
+                    <th>Check button</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in items %}
+                    <tr>
+                        <td>{{ item.number }} </td>
+                        <td>{{ item.example }} </td>
+                        <td>{{ item.word }}</td>
+                        <td>{{ item.meaning }}</td>
+                        <td> Check button </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
